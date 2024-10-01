@@ -1,0 +1,32 @@
+version: '4'
+
+services:
+  node1:
+    build:
+      context: /node1
+      dockerfile: Dockerfile.node1
+    ports:
+      - "5000:5000"
+    networks:
+      - mattern_network
+
+  node2:
+    build:
+      context: /node2
+      dockerfile: Dockerfile.node2
+    ports:
+      - "5001:5001"
+    networks:
+      - mattern_network
+
+  node3:
+    build:
+      context: /node3
+      dockerfile: Dockerfile.node3
+    ports:
+      - "5002:5002"
+    networks:
+      - mattern_network
+
+networks:
+  mattern_network:
