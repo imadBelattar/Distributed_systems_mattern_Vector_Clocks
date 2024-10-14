@@ -1,4 +1,0 @@
-FROM openjdk:17-jdk-slim
-WORKDIR /usr/src/app
-COPY tp1_distributed_systems_node3.jar app.jar
-CMD ["java", "-jar", "app.jar"]
